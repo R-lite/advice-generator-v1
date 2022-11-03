@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-color: hsl(218, 22%, 20%);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.advice-card {
+    background-color: hsl(217, 18%, 26%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .4rem;
+    max-width: 50vw;
+}
+.advice-numb {
+    font-size: .4rem;
+    font-family: monospace;
+    font-family: url('https://fonts.google.com/specimen/Manrope');
+    color: rgb(41, 247, 247);
+}
+.advice-body {
+    max-width: 70%;
+    font-family: monospace;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.dice {
+    margin: auto;
+    padding: .6rem;
+    border-radius: 50%;
+    background-color: rgb(41, 247, 247);
+    width: 1.3rem;
+    height: 1.3rem;
+    position: relative;
+    top: 1.3rem;
+    display: flex;
+    justify-content: center;
+    transition: filter .2s ease-in;
+}
+.dice:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(167, 245, 245));
+}
+.dice img {
+    height: 18px;
+    width: 18px;
+}
+.dice img:hover {
+    transform: rotate(160deg);
+}
