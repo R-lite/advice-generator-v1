@@ -1,18 +1,22 @@
-const { Module } = require("module");
-const axios = require('axios');
+const adviceNumb = document.querySelector('.advice-numb span');
+const adviceBody = document.querySelector('.advice-body span');
+const dice = document.querySelector('.dice');
 
-const getAdvice = async () => {
-    try {
-        return await axios.get('https://api.adviceslip.com/advice');
-    } catch {
-        const data = {
-            "id": -1,
-            "advice": "Could not retrieve advice from the server... Sometimes trying multiple times may be the solution"
-        }
-        return data;
-    }
+const getApiData = ()=>{
+    fetch('https://api.adviceslip.com/advice', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+        },
+    })
+    .then(response => response.json())
+    .then(response => {
+        const {id, advice} = response.slip;
+        adviceNumb.innerHTML = id;
+        adviceBody.innerHTML = advice;
+    })   //
+    .catch(err => err)
 }
 
-result = getAdvice();
-console.log(result)
-Module.export = getAdvice;
+
+dice.addEventListener('click', getApiData());
