@@ -18,6 +18,7 @@ body {
     align-items: center;
     border-radius: .4rem;
     max-width: 50vw;
+    padding: 1rem 2rem 0rem 2rem;
 }
 .advice-numb {
     font-size: .4rem;
@@ -52,6 +53,9 @@ body {
     height: 18px;
     width: 18px;
 }
-.dice img:hover {
-    transform: rotate(160deg);
+
+@media only screen and (maxwidth: 810px) {
+    .patter-divider{
+        content: url('./images/pattern-divider-mobile.svg');
+    }
 }
