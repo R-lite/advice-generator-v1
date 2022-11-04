@@ -14,9 +14,10 @@ const getApiData = ()=>{
         const {id, advice} = response.slip;
         adviceNumb.innerHTML = id;
         adviceBody.innerHTML = advice;
-    })   //
-    .catch(err => err)
+    })
+    .catch(err => err);
 }
 
-
-dice.addEventListener('click', getApiData());
+dice.addEventListener('click', () => {
+    getApiData();
+});
