@@ -54,8 +54,26 @@ body {
     width: 18px;
 }
 
-@media only screen and (maxwidth: 810px) {
-    .patter-divider{
-        content: url('./images/pattern-divider-mobile.svg');
+@media only screen and (max-width: 810px) {
+    .advice-card{
+        max-width: 70vw;
+    }
+    .advice-body{
+        max-width: 80%;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .advice-card{
+        padding: 1rem 1rem 0rem 1rem;
+    }
+    .advice-numb{
+        font-size: .3rem;
+    }
+    .advice-body{
+        max-width: 90%;
+        font-size: smaller;
+    }
+    .patter-divider {
+        zoom: .5;
     }
 }
