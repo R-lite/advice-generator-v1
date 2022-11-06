@@ -48,6 +48,7 @@ body {
 }
 .dice:hover {
     filter: drop-shadow(0 0 0.75rem rgb(167, 245, 245));
+    animation: dice-spin 5s infinite linear;
 }
 .dice img {
     height: 18px;
@@ -77,3 +78,13 @@ body {
         zoom: .5;
     }
 }
+
+@keyframes dice-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
